@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d8ebe5"/><stop offset="1" stop-color="#eef2e8"/></linearGradient></defs>
+<rect width="800" height="520" fill="url(#g)"/>
+<g fill="#6b9890" opacity=".6"><path d="M0 390 Q170 330 330 390 T800 370 V520 H0Z"/><path d="M0 435 Q190 385 390 435 T800 420 V520 H0Z" fill="#4f7f7b"/></g>
+<g fill="#fff" opacity=".85"><rect x="245" y="180" width="310" height="185" rx="8"/><path d="M220 180 L400 95 L580 180Z"/><rect x="285" y="215" width="65" height="65" rx="4" fill="#8bb6ae"/><rect x="375" y="215" width="65" height="65" rx="4" fill="#8bb6ae"/><rect x="465" y="215" width="55" height="150" rx="4" fill="#8bb6ae"/><rect x="375" y="300" width="65" height="65" fill="#d9e9e4"/></g>
+<text x="400" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#24545a">사진을 불러올 수 없습니다</text>
+</svg>
