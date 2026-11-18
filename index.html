@@ -29,22 +29,97 @@ footer{background:var(--deep);color:#d4e5e2;padding:31px 0;font-size:11px}footer
 @media(max-width:950px){.menu-grid{grid-template-columns:repeat(3,1fr)}.itinerary{grid-template-columns:repeat(3,1fr)}.itinerary:before{display:none}.cards{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.wrap{width:calc(100% - 28px)}.head-note{display:none}.hero{min-height:470px}.hero-inner{padding:65px 0 85px}.menu-grid{grid-template-columns:repeat(2,1fr);gap:8px}.menu-tile{min-height:92px;padding:12px 8px}.menu-tile b{font-size:13px}.menu-tile small{font-size:9px}.section-head{display:block}.section-index{display:block;margin-top:9px}.reason-grid,.info-grid,.cards{grid-template-columns:1fr}.flight{grid-template-columns:1fr}.hotel-grid{grid-template-columns:1fr}.hotel-shot{height:128px}.hotel .card-body{padding:13px 14px 15px}.map-panel{grid-template-columns:1fr;padding:15px}.map-art{min-height:340px}.itinerary{grid-template-columns:1fr;gap:9px}.itinerary:before{display:block;width:3px;height:auto;top:24px;bottom:24px;left:22px;right:auto}.day-card{padding:13px 14px 14px 17px;margin-left:0}.day-top{margin-bottom:8px}.day-card h3{margin-left:25px;margin-top:-26px;margin-bottom:8px}.day-card p,.day-card ul,.day-card .time-chip{margin-left:25px}.schedule-intro{display:block}.flight-badge{margin-top:11px}.detail-row{grid-template-columns:68px 1fr;padding:11px 13px}.foot{display:block}.credits{margin-top:14px}}
 @media(max-width:560px){.visa-service{padding:16px 17px}.visa-service strong{font-size:21px}}
+
+/* 2026-11 가독성 개선 및 세로형 상품 카드 */
+body{font-size:16px;line-height:1.72}
+.head-note{font-size:14px}.brand{font-size:19px}
+.menu-tile b{font-size:16px}.menu-tile small{font-size:12px}.menu-icon{font-size:29px}
+.quicknav h2{font-size:18px}.lead{font-size:16px}.kicker{font-size:13px}.section-index{font-size:14px}
+.reason h3{font-size:19px}.reason p{font-size:15px}.reason .num{font-size:12px}
+.info strong{font-size:18px}.info span{font-size:15px}
+.visa-service span{font-size:12px}.visa-service b{font-size:18px}.visa-service small{font-size:13px}
+.flight h3{font-size:20px}.flight p{font-size:15px}.notice{font-size:14px}
+.card h3{font-size:20px}.en{font-size:13px}.card p{font-size:15px}.facts span{font-size:12px}
+.hotel h3{font-size:19px}.hotel p{font-size:14px}.subhead{font-size:18px}
+.map-list div{font-size:15px}.map-open{font-size:14px}
+.faq summary{font-size:16px}.faq details p{font-size:15px}
+footer{font-size:13px}footer b{font-size:17px}
+.product-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.product-card{padding:22px 23px 19px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 7px 24px rgba(9,53,58,.05);transition:transform .2s,box-shadow .2s}
+.product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.product-card-heading{display:flex;align-items:center;gap:15px;margin-bottom:16px}
+.product-emoji{display:grid;place-items:center;flex:0 0 55px;width:55px;height:55px;border-radius:17px;background:#e6f5ef;font-size:30px}
+.product-code{display:block;color:var(--teal);font-size:14px;letter-spacing:.045em;font-weight:950}
+.product-card h3{font-size:21px;margin:2px 0 0;line-height:1.3;letter-spacing:-.035em;color:var(--deep)}
+.product-description{font-size:15px;margin:0 0 13px;line-height:1.65;color:#486367;word-break:keep-all}
+.product-point{font-size:13px;display:inline-block;background:#eef7f3;border-radius:9px;padding:6px 10px;color:#187a73;font-weight:850}
+.promotion-cta{margin-top:22px;padding:20px 23px;border-radius:19px;background:#eaf5f0;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.promotion-cta>span{font-size:17px;font-weight:850;color:var(--deep)}
+.action-link{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-align:center;background:var(--teal);color:#fff;font-size:17px;font-weight:900;padding:14px 23px;border-radius:13px;box-shadow:0 8px 20px rgba(8,126,131,.22);transition:background .2s,transform .2s}
+.action-link:hover{background:#07565c;transform:translateY(-2px)}.action-link:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.link-panel{border:1px solid #d2e9e1;border-radius:23px;padding:43px 25px;text-align:center;background:linear-gradient(135deg,#eff8f4,#fffaf0)}
+.link-panel-emoji{font-size:44px}.link-panel h3{margin:12px 0 8px;font-size:27px;letter-spacing:-.04em;color:var(--deep)}
+.link-panel p{color:var(--muted);font-size:16px;margin:0 0 24px}
+@media(max-width:650px){.product-cards{grid-template-columns:1fr;gap:11px}.product-card{padding:19px}.product-card h3{font-size:20px}.product-description{font-size:15px}.promotion-cta{flex-direction:column;text-align:center}.action-link{width:100%;font-size:16px}.link-panel{padding:34px 19px}.link-panel h3{font-size:23px}.menu-tile b{font-size:15px}.menu-tile small{font-size:11px}.hotel p{font-size:14px}}
+
+.hotel-shot.image-unavailable:before{content:"📷 " attr(data-label);position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(135deg,#0a5960,#78aaa0);padding:12px;font-size:13px;font-weight:750}
+
+/* 2026-11-18: 4 x 2 compact product cards and restored itinerary */
+.product-cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.product-card{padding:17px 15px 16px;border-radius:16px;min-width:0;display:flex;flex-direction:column;justify-content:flex-start}
+.product-card-heading{gap:10px;margin-bottom:9px;align-items:center}
+.product-emoji{flex:0 0 42px;width:42px;height:42px;font-size:23px;border-radius:12px}
+.product-code{font-size:25px;font-weight:950;letter-spacing:-.025em;line-height:1.12;color:#087e83}
+.product-card h3{font-size:16px;margin-top:4px;line-height:1.25}
+.product-description{font-size:13px;line-height:1.45;margin:0 0 9px;flex:1}
+.product-point{font-size:12px;padding:5px 8px;line-height:1.3;align-self:flex-start}
+.schedule-cta{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:24px;padding:19px 22px;background:#eaf5f0;border-radius:17px}
+.schedule-cta strong{font-size:19px;color:var(--deep)}
+.schedule-cta p{font-size:14px;color:var(--muted);margin:4px 0 0}
+@media (min-width:651px) and (max-width:1050px){.product-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:650px){.product-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-card{padding:13px 10px}.product-card-heading{gap:7px;align-items:flex-start}.product-emoji{flex-basis:32px;width:32px;height:32px;font-size:19px}.product-code{font-size:21px}.product-card h3{font-size:14px}.product-description{font-size:12px}.product-point{font-size:11px}.schedule-cta{display:block;padding:18px}.schedule-cta .action-link{margin-top:14px}.schedule-cta strong{font-size:17px}}
+@media (max-width:380px){.product-cards{grid-template-columns:1fr}.product-card{padding:16px}.product-code{font-size:25px}}
+
+/* v3: slim, single-row sticky navigation, including mobile horizontal scrolling */
+html{scroll-padding-top:160px}
+.quicknav{position:sticky;top:64px;z-index:29;margin-top:0;width:100%;max-width:none;padding:9px max(20px,calc((100vw - 1160px)/2));background:rgba(250,253,251,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 9px 25px rgba(7,59,69,.09)}
+.menu-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.menu-tile{min-height:68px;padding:10px 7px;gap:2px;border-radius:12px;box-shadow:none;flex-direction:row;justify-content:center}
+.menu-icon{font-size:22px;flex-shrink:0}
+.menu-tile b{font-size:14px;white-space:nowrap}
+.menu-tile small{display:none}
+.menu-tile.active{background:#e3f3ef;border-color:#82bcb3}
+/* center both CTA contents/buttons within their panels */
+.schedule-cta,.promotion-cta{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
+.schedule-cta .action-link,.promotion-cta .action-link{width:auto;min-width:220px;max-width:100%}
+.schedule-cta>div{text-align:center}
+@media(max-width:800px){
+  html{scroll-padding-top:145px}
+  .quicknav{padding:8px 12px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin}
+  .menu-grid{display:flex;gap:7px;width:max-content;min-width:100%}
+  .menu-tile{flex:0 0 auto;min-height:54px;padding:9px 12px}
+  .menu-tile b{font-size:13px}
+  .menu-icon{font-size:19px}
+}
+@media(max-width:650px){
+  .schedule-cta,.promotion-cta{display:flex;align-items:center;gap:12px}
+  .schedule-cta .action-link,.promotion-cta .action-link{margin-top:0;width:auto;max-width:100%;min-width:205px}
+}
 </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="#home">MODE<em>TOUR</em> · MANADO</a><span class="head-note">대리점 상담에 바로 쓰는 마나도 여행 교육자료</span></div></header>
 <main id="home">
 <div class="hero"><div class="wrap hero-inner"><div class="eyebrow">NORTH SULAWESI · INDONESIA</div><h1>마나도<br/>한눈에 보기</h1></div></div>
-<div aria-label="마나도 교육자료 바로가기" class="wrap quicknav"><nav class="menu-grid">
+<div aria-label="마나도 교육자료 바로가기" class="wrap quicknav"><nav aria-label="마나도 섹션 바로가기 · 좌우 스크롤 가능" class="menu-grid">
 <a class="menu-tile" href="#intro"><span class="menu-icon">🌏</span><b>마나도 소개</b><small>지역 개관 · 기본 정보</small></a>
 <a class="menu-tile" href="#attractions"><span class="menu-icon">🏝️</span><b>대표 관광지</b><small>해양 · 고원 · 시내 관광</small></a>
 <a class="menu-tile" href="#hotels"><span class="menu-icon">🏨</span><b>호텔 안내</b><small>시내·휴양 리조트</small></a>
-<a class="menu-tile" href="#schedule"><span class="menu-icon">🗓️</span><b>3박 5일 일정</b><small>판매1위 대표일정</small></a>
+<a class="menu-tile" href="#schedule"><span class="menu-icon">🗓️</span><b>대표 일정 확인</b><small>3박 5일 · 상품 바로가기</small></a>
 <a class="menu-tile" href="#products"><span class="menu-icon">🎫</span><b>상품 코드</b><small>AIP·AIN 상품 비교</small></a>
 <a class="menu-tile" href="#faq"><span class="menu-icon">💬</span><b>자주 묻는 질문</b><small>상담 Q&amp;A</small></a>
 </nav>
-
 </div>
 <section id="intro"><div class="wrap">
 <div class="section-head"><div><div class="kicker">01 · DESTINATION</div><h2>마나도 소개</h2><p class="lead">인도네시아 북술라웨시의 관문. 청정 바다와 고원, 자연과 문화가 한 여행 안에 공존합니다.</p></div><span class="section-index">지역 개관 · 기본 정보</span></div>
@@ -58,7 +133,7 @@ footer{background:var(--deep);color:#d4e5e2;padding:31px 0;font-size:11px}footer
 <div class="section-head"><div><div class="kicker">02 · ATTRACTIONS</div><h2>마나도 대표 관광지</h2></div><span class="section-index">관광지별 사진과 핵심 포인트</span></div>
 <div class="cards">
 <article class="card"><div class="photo" data-label="부나켄 섬과 청록빛 산호초 항공 사진"><img alt="부나켄 섬과 청록빛 산호초 항공 사진" data-fallback="https://www.indonesia.travel/contentassets/4e94a2f89c614b079963b51bf0bf4e63/bunaken-dive-day.jpg" decoding="async" loading="lazy" src="https://assets.pikiran-rakyat.com/crop/0x0%3A0x0/x/photo/2023/01/30/1794622822.jpg"/><span class="pill">MARINE · 핵심</span><span class="photo-credit"><a href="https://jurnalaceh.pikiran-rakyat.com/nasional/pr-1796182266/mengintip-keindahan-taman-nasional-bunaken-destinasi-wisata-di-manado-yang-menjadi-situs-warisan-dunia" rel="noreferrer" target="_blank">사진 출처</a></span></div><div class="card-body"><h3>부나켄 해양국립공원</h3><div class="en">Bunaken National Park</div><p>수직 산호 절벽과 다양한 열대어, 바다거북을 만나는 대표 해양 보호구역. 마나도 본섬 선착장에서 쾌속선으로 이동합니다.</p><div class="facts"><span>스노클링</span><span>산호초</span><span>바다거북</span></div></div></article>
-<article class="card"><div class="photo" data-label="나인 아일랜드의 흰 모래톱과 청록빛 바다"><img alt="나인 아일랜드의 흰 모래톱과 청록빛 바다" decoding="async" loading="lazy" src="images/nain-island.png"/><span class="pill">ISLAND</span></div><div class="card-body"><h3>나인 아일랜드</h3><div class="en">Nain Island</div><p>하루 중 물때에 따라 바다 위로 드러나는 신비로운 모래톱이 특징인 섬. 투어 전 물때 확인이 중요합니다.</p><div class="facts"><span>모래톱</span><span>물때 확인</span></div></div></article>
+<article class="card"><div class="photo" data-label="나인 아일랜드의 흰 모래톱과 청록빛 바다"><img alt="나인 아일랜드의 흰 모래톱과 청록빛 바다" data-fallback="https://img.inews.id/media/1050/files/inews_new/2022/11/11/pasir_timbul.jpg" decoding="async" loading="lazy" src="https://tn-bunaken.com/wp-content/uploads/2022/03/Pesona-Pulau-Terjauh-di-Kawasan-Taman-Nasional-Bunaken-37-1024x473.jpg"/><span class="pill">ISLAND</span><span class="photo-credit"><a href="https://tn-bunaken.com/2022/03/15/pesona-pulau-terjauh-di-kawasan-taman-nasional-bunaken/" rel="noreferrer" target="_blank">사진 출처</a></span></div><div class="card-body"><h3>나인 아일랜드</h3><div class="en">Nain Island</div><p>하루 중 물때에 따라 바다 위로 드러나는 신비로운 모래톱이 특징인 섬. 투어 전 물때 확인이 중요합니다.</p><div class="facts"><span>모래톱</span><span>물때 확인</span></div></div></article>
 <article class="card"><div class="photo" data-label="리하가 섬의 흰 백사장과 청록빛 바다"><img alt="리하가 섬의 흰 백사장과 청록빛 바다" data-fallback="https://petualang.travelingyuk.com/uploads/2018/10/fi-minahasa.png" decoding="async" loading="lazy" src="https://kilaskini.com/assets/berita/original/51198375680-pulau_lihaga_3.jpg"/><span class="pill">ISLAND</span><span class="photo-credit"><a href="https://kilaskini.com/detail/553/sedang-berada-di-minahasa-rugi-kalau-tak-mampir-ke-pulau-lihaga-yang-menyimpan-keindahan-tersembunyi" rel="noreferrer" target="_blank">사진 출처</a></span></div><div class="card-body"><h3>리하가 섬</h3><div class="en">Lihaga Island</div><p>새하얀 산호 백사장과 투명한 청록빛 바다가 어우러진 무인도. 북부 코스 상품의 핵심 목적지입니다.</p><div class="facts"><span>백사장</span><span>청록빛 바다</span></div></div></article>
 <article class="card"><div class="photo" data-label="토모혼 울로안 전망대와 산악 풍경"><img alt="토모혼 울로안 전망대와 산악 풍경" data-fallback="https://cdn-image.hipwee.com/wp-content/uploads/2020/01/hipwee-danau-linow-danau-beracun-nan-cantik_130859_1140.jpg" decoding="async" loading="lazy" src="https://assets.pikiran-rakyat.com/crop/0x0%3A0x0/1200x675/photo/2023/10/27/3235676928.jpg"/><span class="pill">HIGHLAND</span><span class="photo-credit"><a href="https://musianapedia.pikiran-rakyat.com/wisata/pr-2267750996/healing-seru-di-wisata-tomohon-menjelajahi-keindahan-dan-ketenangan-di-amphitheater-woloan-tomohon" rel="noreferrer" target="_blank">사진 출처</a></span></div><div class="card-body"><h3>토모혼 고원</h3><div class="en">Tomohon</div><p>해발 700~800m 고원 지대. 무지개 언덕(펠랑이), 에카야나 사원, 전통시장 등을 둘러보는 자연·문화 코스.</p><div class="facts"><span>고원 자연</span><span>꽃의 도시</span></div></div></article>
 <article class="card"><div class="photo" data-label="리노우 호수의 에메랄드빛 물과 호숫가 데크"><img alt="리노우 호수의 에메랄드빛 물과 호숫가 데크" data-fallback="https://assets.pikiran-rakyat.com/crop/0x0%3A0x0/1200x675/photo/2023/10/27/3235676928.jpg" decoding="async" loading="lazy" src="https://cdn-image.hipwee.com/wp-content/uploads/2020/01/hipwee-danau-linow-danau-beracun-nan-cantik_130859_1140.jpg"/><span class="pill">VOLCANIC NATURE</span><span class="photo-credit"><a href="https://www.hipwee.com/narasi/indahnya-danau-linow-tomohon-terkenal-sampai-mancanegara-berubah-3-warna/" rel="noreferrer" target="_blank">사진 출처</a></span></div><div class="card-body"><h3>리노우 유황 호수</h3><div class="en">Lake Linow</div><p>햇빛과 유황 성분에 따라 물빛이 달라지는 삼색 호수. 고원 투어 중 자연 경관을 즐기기 좋은 장소입니다.</p><div class="facts"><span>유황 호수</span><span>호수 전망</span></div></div></article>
@@ -73,134 +148,127 @@ footer{background:var(--deep);color:#d4e5e2;padding:31px 0;font-size:11px}footer
 <h3 class="subhead">시내 중심 · 공항 인근 호텔</h3>
 <div class="hotel-grid">
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://cache.marriott.com/content/dam/marriott-renditions/MDCFP/mdcfp-exterior-0237-hor-wide.jpg?downsize=1336px%3A%2A&amp;interpolation=progressive-bilinear&amp;output-quality=70" alt="포포인츠 바이 쉐라톤 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://cache.marriott.com/content/dam/marriott-renditions/MDCFP/mdcfp-king-seaview-guestroom-2848-hor-wide.jpg?downsize=1336px%3A%2A&amp;interpolation=progressive-bilinear&amp;output-quality=70" alt="포포인츠 바이 쉐라톤 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>포포인츠 바이 쉐라톤</h3><p>공항 약 35분 · 대형 쇼핑몰 타운스퀘어 직결</p><p>오션뷰 수영장 · 메리어트 계열의 쾌적한 객실</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="포포인츠 바이 쉐라톤 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer" src="https://cache.marriott.com/content/dam/marriott-renditions/MDCFP/mdcfp-exterior-0237-hor-wide.jpg?downsize=1336px%3A%2A&amp;interpolation=progressive-bilinear&amp;output-quality=70"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="포포인츠 바이 쉐라톤 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://cache.marriott.com/content/dam/marriott-renditions/MDCFP/mdcfp-king-seaview-guestroom-2848-hor-wide.jpg?downsize=1336px%3A%2A&amp;interpolation=progressive-bilinear&amp;output-quality=70"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>포포인츠 바이 쉐라톤</h3><p>공항 약 35분 · 대형 쇼핑몰 타운스퀘어 직결</p><p>오션뷰 수영장 · 메리어트 계열의 쾌적한 객실</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://image.kkday.com/v2/image/get/s1.kkday.com/dyhotel_158111/20250711065425_AGYOx/jpg" alt="베스트웨스턴 더 라군 호텔 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://images.bestwestern.com/bwi/brochures/99807/photos/1024/25889753.jpg" alt="베스트웨스턴 더 라군 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>베스트웨스턴 더 라군</h3><p>공항 약 40분 · 말랄라양 해변 산책로 인접</p><p>씨뷰 객실 · 해안가 로컬 맛집 접근</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="베스트웨스턴 더 라군 호텔 전경" loading="lazy" referrerpolicy="no-referrer" src="https://image.kkday.com/v2/image/get/s1.kkday.com/dyhotel_158111/20250711065425_AGYOx/jpg"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="베스트웨스턴 더 라군 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://images.bestwestern.com/bwi/brochures/99807/photos/1024/25889753.jpg"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>베스트웨스턴 더 라군</h3><p>공항 약 40분 · 말랄라양 해변 산책로 인접</p><p>씨뷰 객실 · 해안가 로컬 맛집 접근</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://assets.pikiran-rakyat.com/crop/0x0%3A0x0/1200x675/photo/2024/02/09/3520040745.jpg" alt="루완사 호텔 마나도 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://images.trvl-media.com/lodging/78000000/77880000/77876600/77876506/3c051e9b.jpg?h=800&amp;impolicy=fcrop&amp;quality=medium&amp;w=1200" alt="루완사 호텔 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>루완사 호텔</h3><p>공항 약 30분</p><p>모던 비즈니스 인테리어 · 루프탑 바 · 야외 풀 · 스파</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="루완사 호텔 마나도 전경" loading="lazy" referrerpolicy="no-referrer" src="https://assets.pikiran-rakyat.com/crop/0x0%3A0x0/1200x675/photo/2024/02/09/3520040745.jpg"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="루완사 호텔 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://images.trvl-media.com/lodging/78000000/77880000/77876600/77876506/3c051e9b.jpg?h=800&amp;impolicy=fcrop&amp;quality=medium&amp;w=1200"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>루완사 호텔</h3><p>공항 약 30분</p><p>모던 비즈니스 인테리어 · 루프탑 바 · 야외 풀 · 스파</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://img.modetour.com/eagle/photoimg/85049/bfile/638896371232697604.jpg" alt="스위스벨 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://irp.cdn-website.com/1074ee8b/dms3rep/multi/opt/swiss-belhotel-maleosan-manado-deluxe-room-1-299ee1ed-1920w.jpg" alt="스위스벨 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>스위스벨</h3><p>공항 약 25분</p><p>넓은 룸 면적 · 가성비 우수 · 마나도 시내 중심</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="스위스벨 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer" src="https://img.modetour.com/eagle/photoimg/85049/bfile/638896371232697604.jpg"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="스위스벨 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://irp.cdn-website.com/1074ee8b/dms3rep/multi/opt/swiss-belhotel-maleosan-manado-deluxe-room-1-299ee1ed-1920w.jpg"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>스위스벨</h3><p>공항 약 25분</p><p>넓은 룸 면적 · 가성비 우수 · 마나도 시내 중심</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://cache.marriott.com/is/image/marriotts7prod/cy-mdccy-hotel-facade-35652%3AWide-Hor?fit=constrain&amp;wid=1336" alt="코트야드 바이 메리어트 마나도 호텔 전경 및 입구" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://cache.marriott.com/is/image/marriotts7prod/cy-mdccy-king-room-30406%3AWide-Hor?fit=constrain&amp;wid=1336" alt="코트야드 바이 메리어트 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>코트야드 바이 메리어트</h3><p>구. 노보텔 · 공항 약 15분</p><p>글로벌 체인 · 넓은 수영장 · 키즈클럽</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="코트야드 바이 메리어트 마나도 호텔 전경 및 입구" loading="lazy" referrerpolicy="no-referrer" src="https://cache.marriott.com/is/image/marriotts7prod/cy-mdccy-hotel-facade-35652%3AWide-Hor?fit=constrain&amp;wid=1336"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="코트야드 바이 메리어트 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://cache.marriott.com/is/image/marriotts7prod/cy-mdccy-king-room-30406%3AWide-Hor?fit=constrain&amp;wid=1336"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>코트야드 바이 메리어트</h3><p>구. 노보텔 · 공항 약 15분</p><p>글로벌 체인 · 넓은 수영장 · 키즈클럽</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20075988-6f12ec676f2e9f9b159ca1f63819e457.jpeg?_src=imagekit&amp;tr=dpr-3" alt="센트라 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://the-sentra-hotel.manado-hotels.com/data/Pics/OriginalPhoto/15386/1538697/1538697286/the-sentra-manado-manado-pic-13.JPEG" alt="센트라 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>센트라 마나도</h3><p>공항 약 20분</p><p>신축급 객실 컨디션 · 실내 수영장 · 키즈존</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="센트라 마나도 호텔 전경" loading="lazy" referrerpolicy="no-referrer" src="https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20075988-6f12ec676f2e9f9b159ca1f63819e457.jpeg?_src=imagekit&amp;tr=dpr-3"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="센트라 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://the-sentra-hotel.manado-hotels.com/data/Pics/OriginalPhoto/15386/1538697/1538697286/the-sentra-manado-manado-pic-13.JPEG"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>센트라 마나도</h3><p>공항 약 20분</p><p>신축급 객실 컨디션 · 실내 수영장 · 키즈존</p></div>
 </article>
 </div>
 <h3 class="subhead">휴양 · 골프 리조트</h3>
 <div class="hotel-grid">
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20006283-effc77813df7f1adeb2ff73d3fd85585.png?_src=imagekit&amp;tr=q-80%2Cc-at_max%2Cw-1280%2Ch-720" alt="NDC 리조트 앤 스파 마나도 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://static51.com-hotel.com/uploads/hotel/80493/photo/ndc-resort-spa_17208308581.jpg" alt="NDC 리조트 앤 스파 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>NDC 리조트 &amp; 스파</h3><p>공항 약 30분 · 부나켄 오션프론트 단지</p><p>신관 발코니 룸 · 키즈워터붐 · 키즈클럽 · 스파</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="NDC 리조트 앤 스파 마나도 전경" loading="lazy" referrerpolicy="no-referrer" src="https://ik.imagekit.io/tvlk/apr-asset/Ixf4aptF5N2Qdfmh4fGGYhTN274kJXuNMkUAzpL5HuD9jzSxIGG5kZNhhHY-p7nw/hotel/asset/20006283-effc77813df7f1adeb2ff73d3fd85585.png?_src=imagekit&amp;tr=q-80%2Cc-at_max%2Cw-1280%2Ch-720"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="NDC 리조트 앤 스파 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://static51.com-hotel.com/uploads/hotel/80493/photo/ndc-resort-spa_17208308581.jpg"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>NDC 리조트 &amp; 스파</h3><p>공항 약 30분 · 부나켄 오션프론트 단지</p><p>신관 발코니 룸 · 키즈워터붐 · 키즈클럽 · 스파</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://lbcdn.airpaz.com/hotelimages/39687/grand-luley-manado-021989542b7721598f5230f1435b03c4.jpg" alt="그랜드 룰리 마나도 리조트 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://luleyhotels.com/wp-content/uploads/2021/12/Deluxe-1-1.jpg" alt="그랜드 룰리 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>그랜드 룰리 마나도</h3><p>공항 약 50분 · 맹그로브 해안 열대 정원형</p><p>발코니 룸 · 전용 선착장 · 다이빙 센터</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="그랜드 룰리 마나도 리조트 전경" data-fallback="https://luleyhotels.com/wp-content/uploads/2021/12/Swimming-Pool-square.jpg" data-fallback2="https://luleyhotels.com/wp-content/uploads/2021/12/Deluxe-1-1.jpg" loading="lazy" referrerpolicy="no-referrer" src="https://lbcdn.airpaz.com/hotelimages/39687/grand-luley-manado-021989542b7721598f5230f1435b03c4.jpg"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="그랜드 룰리 마나도 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://luleyhotels.com/wp-content/uploads/2021/12/Deluxe-1-1.jpg"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>그랜드 룰리 마나도</h3><p>공항 약 50분 · 맹그로브 해안 열대 정원형</p><p>발코니 룸 · 전용 선착장 · 다이빙 센터</p></div>
 </article>
 <article class="hotel">
-  <div class="hotel-photos">
-    <figure class="hotel-shot"><img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10015494-1082x608-FIT_AND_TRIM-7b181d6e6f77bf772aa4c0e72a479b40.jpeg?_src=imagekit&amp;tr=q-80%2Cc-at_max%2Cw-1280%2Ch-720" alt="파라다이스 골프 앤 리조트 전경" loading="lazy" referrerpolicy="no-referrer"><figcaption>전경</figcaption></figure>
-    <figure class="hotel-shot"><img src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D709%2Cfit%3Dcrop/dWxLE290GDsQWzyW/deluxe-twin-ocean-Bx3tNylWwWZ7KFNL.jpg" alt="파라다이스 골프 앤 리조트 기본 객실" loading="lazy" referrerpolicy="no-referrer"><figcaption>기본 객실</figcaption></figure>
-  </div>
-  <div class="card-body"><h3>파라다이스 골프 &amp; 리조트</h3><p>공항 약 70분 · 북부 리쿠팡 해변</p><p>오션뷰 리조트 · 18홀 골프 코스</p></div>
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="파라다이스 골프 앤 리조트 전경" loading="lazy" referrerpolicy="no-referrer" src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10015494-1082x608-FIT_AND_TRIM-7b181d6e6f77bf772aa4c0e72a479b40.jpeg?_src=imagekit&amp;tr=q-80%2Cc-at_max%2Cw-1280%2Ch-720"/><figcaption>전경</figcaption></figure>
+<figure class="hotel-shot"><img alt="파라다이스 골프 앤 리조트 기본 객실" loading="lazy" referrerpolicy="no-referrer" src="https://assets.zyrosite.com/cdn-cgi/image/format%3Dauto%2Cw%3D768%2Ch%3D709%2Cfit%3Dcrop/dWxLE290GDsQWzyW/deluxe-twin-ocean-Bx3tNylWwWZ7KFNL.jpg"/><figcaption>기본 객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>파라다이스 골프 &amp; 리조트</h3><p>공항 약 70분 · 북부 리쿠팡 해변</p><p>오션뷰 리조트 · 18홀 골프 코스</p></div>
+</article>
+<article class="hotel">
+<div class="hotel-photos">
+<figure class="hotel-shot"><img alt="마나도 메리어트 리조트 앤 스파 전경 조감도" loading="lazy" referrerpolicy="no-referrer" src="https://mitrakonstruksi.co.id/images/project/e5dd4c1978b02270cfb3f48fd77e889a.png?var=291687127"/><figcaption>전경 · 조감도</figcaption></figure>
+<figure class="hotel-shot"><img alt="마나도 메리어트 리조트 앤 스파 객실" loading="lazy" referrerpolicy="no-referrer" src="https://images.trvl-media.com/lodging/131000000/131000000/130992300/130992299/27eb9c61.jpg?h=800&amp;impolicy=fcrop&amp;quality=medium&amp;w=1200"/><figcaption>객실</figcaption></figure>
+</div>
+<div class="card-body"><h3>마나도 메리어트 리조트 &amp; 스파</h3><p>📍 북부 리쿠팡 해변 · 메리어트 계열 리조트</p><p><strong style="color:#087e83">✨ 2026년 12월 오픈 예정</strong> · 일정 변동 가능</p></div>
 </article>
 </div>
 </div></section>
 <section class="alt" id="map"><div class="wrap">
 <div class="section-head"><div><div class="kicker">04 · DESTINATION MAP</div><h2>마나도 주요 관광지 위치</h2></div></div>
 <div class="map-panel">
-  <div id="manadoMap" class="map-canvas" role="application" aria-label="마나도 주요 관광지 위치 지도">지도 연결 중...</div>
-  <div class="map-list">
-    <div><b>마나도 시내</b>　호텔 · 쇼핑 · 시내 관광</div>
-    <div><b>부나켄</b>　해양국립공원 · 호핑 투어</div>
-    <div><b>토모혼</b>　고원 자연 · 리노우 호수</div>
-    <div><b>탕코코</b>　열대우림 · 야생동물 관찰</div>
-    <div><b>리쿠팡</b>　리하가 섬 · 북부 해안</div>
-    <a class="map-open" href="https://www.openstreetmap.org/#map=9/1.50/124.98" target="_blank" rel="noreferrer">지도 크게 보기 ↗</a>
-  </div>
+<div aria-label="마나도 주요 관광지 위치 지도" class="map-canvas" id="manadoMap" role="application">지도 연결 중...</div>
+<div class="map-list">
+<div><b>마나도 시내</b>　호텔 · 쇼핑 · 시내 관광</div>
+<div><b>부나켄</b>　해양국립공원 · 호핑 투어</div>
+<div><b>토모혼</b>　고원 자연 · 리노우 호수</div>
+<div><b>탕코코</b>　열대우림 · 야생동물 관찰</div>
+<div><b>리쿠팡</b>　리하가 섬 · 북부 해안</div>
+<a class="map-open" href="https://www.openstreetmap.org/#map=9/1.50/124.98" rel="noreferrer" target="_blank">지도 크게 보기 ↗</a>
+</div>
 </div></div></section>
-<section id="schedule"><div class="wrap">
-<div class="section-head"><div><div class="kicker">05 · ITINERARY</div><h2>마나도 3박 5일 일정표</h2></div><span class="section-index">DAY 01 → DAY 05</span></div>
-<div class="schedule-intro"><p>인천 출발 → 토모혼 고원 → 부나켄 해양 투어 → 시내 관광 → 인천 도착</p><div class="flight-badge"><span>가는 편 ZE535 · 20:05 출발</span><span>오는 편 ZE536 · 01:55 출발</span></div></div>
-<div class="itinerary">
+<section id="schedule"><div class="wrap"><div class="section-head"><div><div class="kicker">05 · ITINERARY</div><h2>🗓️ 마나도 대표 일정 확인</h2><p class="lead">3박 5일 대표 일정 한눈에 보기</p></div><span class="section-index">DAY 01 → DAY 05</span></div><div class="schedule-intro"><p>인천 출발 → 토모혼 고원 → 부나켄 해양 투어 → 시내 관광 → 인천 도착</p><div class="flight-badge"><span>가는 편 ZE535 · 20:05 출발</span><span>오는 편 ZE536 · 01:55 출발</span></div></div><div class="itinerary">
 <article class="day-card"><div class="day-top"><span class="day-dot"></span><span class="day-no">DAY 01</span></div><h3>인천 출발<br/>마나도 도착</h3><p>저녁 출발 · 현지 도착 후 호텔 이동</p><ul><li>인천공항 출발</li><li>마나도 도착</li><li>호텔 체크인 및 휴식</li></ul><span class="time-chip">ZE535 · 20:05 → 00:55(+1)</span></article>
 <article class="day-card"><div class="day-top"><span class="day-dot"></span><span class="day-no">DAY 02</span></div><h3>토모혼<br/>고원 투어</h3><p>화산 지형과 선선한 고원 자연</p><ul><li>펠랑이 · 고원 전망</li><li>리노우 호수</li><li>부킷카시 · 온천 힐링</li></ul><span class="time-chip">고원 자연 · 문화 관광</span></article>
 <article class="day-card"><div class="day-top"><span class="day-dot"></span><span class="day-no">DAY 03</span></div><h3>부나켄<br/>호핑 투어</h3><p>마나도 대표 청정 해양 체험</p><ul><li>부나켄 섬 보트 이동</li><li>산호초 스노클링</li><li>바다거북 관찰 포인트</li></ul><span class="time-chip">보트 이동 약 30분</span></article>
 <article class="day-card"><div class="day-top"><span class="day-dot"></span><span class="day-no">DAY 04</span></div><h3>시내 관광<br/>공항 이동</h3><p>마나도 랜드마크 방문 후 귀국 준비</p><ul><li>축복하는 예수상</li><li>마카테테 힐 전망</li><li>공항 이동 및 출국</li></ul><span class="time-chip">ZE536 · 01:55 출발</span></article>
 <article class="day-card"><div class="day-top"><span class="day-dot"></span><span class="day-no">DAY 05</span></div><h3>인천 도착</h3><p>마나도 출발 후 한국 도착</p><ul><li>인천공항 도착</li><li>입국 수속</li><li>여행 종료</li></ul><span class="time-chip">ZE536 · 08:30 도착</span></article>
-</div>
-<div class="itinerary-detail"><h3>일정 흐름 요약</h3><div class="detail-row"><strong>DAY 01</strong><span>인천 출발 · 마나도 도착 · 호텔 체크인 후 휴식</span></div><div class="detail-row"><strong>DAY 02</strong><span>토모혼 고원 투어 · 펠랑이 · 리노우 호수 · 부킷카시 온천 힐링</span></div><div class="detail-row"><strong>DAY 03</strong><span>부나켄 호핑 투어 · 산호초와 야생 바다거북 스노클링 체험</span></div><div class="detail-row"><strong>DAY 04</strong><span>축복하는 예수상 · 마카테테 힐 시티투어 · 공항 이동 및 출국</span></div><div class="detail-row"><strong>DAY 05</strong><span>인천 도착 · 입국 수속</span></div></div>
-</div></section>
-<section class="alt" id="products"><div class="wrap">
-<div class="section-head"><div><div class="kicker">06 · PRODUCT CODE</div><h2>마나도 상품 코드 안내</h2><p class="lead">상품별 핵심 일정과 여행 스타일을 비교해 보세요.</p></div></div>
-<div class="table-wrap"><table><thead><tr><th>상품 코드</th><th>상품 컨셉</th><th>주요 일정 및 핵심 특징</th></tr></thead><tbody>
-<tr><td>AIP100</td><td>자유 에어텔형</td><td>에어텔 + 부나켄 호핑투어 포함</td></tr>
-<tr><td>AIP101</td><td>판매 1위 베스트</td><td>토모혼 고원 + 부나켄 호핑 + 시내관광 완전정복</td></tr>
-<tr><td>AIP102</td><td>세미 패키지형</td><td>1일 자유일정 + 부나켄 호핑 + 시내관광</td></tr>
-<tr><td>AIP103</td><td>올인클루시브 휴양</td><td>부나켄 호핑 + 1일 올인클루시브 + 액티비티 3종 + 22시 레이트체크아웃</td></tr>
-<tr><td>AIN101</td><td>시그니처</td><td>비자대행 + 토모혼 + 부나켄 호핑 + 마사지 1시간 포함</td></tr>
-<tr><td>AIP104</td><td>신상 북부 코스</td><td>리쿠팡 일정 · 리하가 섬 + 탕코코 국립공원</td></tr>
-<tr><td>AIP105</td><td>우리끼리 단독행사</td><td>Only 우리만 · 가족·소그룹 프라이빗 단독 상품</td></tr>
-<tr><td>AIP106</td><td>리하가 섬 특화</td><td>리하가 섬 + 토모혼 투어 또는 리하가 섬 + 부나켄 호핑</td></tr>
-<tr><td>AIP108</td><td>다이빙 6회 + 관광</td><td>모일수록 할인 UP · 다이빙 6회 + 시내관광 (자격증 필수)</td></tr>
-<tr><td>AIP109</td><td>다이빙 6회 + 휴양</td><td>모일수록 할인 UP · 다이빙 6회 + 1일 올인클루시브 (자격증 필수)</td></tr>
-</tbody></table></div>
-</div></section>
+</div><div class="schedule-cta"><div><strong>✈️ 마나도 상품 상세 일정 확인</strong><p>포함사항 · 호텔 · 여행 일정은 상품 페이지에서 확인해 주세요.</p></div><a class="action-link" href="https://www.modetour.com//product-common/27905?type=group" rel="noopener noreferrer" target="_blank">📋 상품 바로가기 ↗</a></div></div></section>
+<section class="alt" id="products"><div class="wrap"><div class="section-head"><div><div class="kicker">06 · PRODUCT CODE</div><h2>🎫 마나도 상품 코드 안내</h2><p class="lead">고객 여행 스타일별로 핵심 특징만 빠르게 확인하세요.</p></div></div><div class="product-cards"><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🏆</span><div><span class="product-code">AIP101</span><h3>판매 1위 베스트</h3></div></div><p class="product-description">토모혼 고원 · 부나켄 호핑 · 시내관광</p><div class="product-point">✨ 관광 완전정복</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🌴</span><div><span class="product-code">AIP102</span><h3>세미 패키지형</h3></div></div><p class="product-description">1일 자유일정 · 부나켄 호핑 · 시내관광</p><div class="product-point">✨ 자유와 관광의 조화</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🍹</span><div><span class="product-code">AIP103</span><h3>올인클루시브 휴양</h3></div></div><p class="product-description">부나켄 호핑 · 22시 레이트체크아웃</p><div class="product-point">✨ 리조트 휴양 집중</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">💎</span><div><span class="product-code">AIN101</span><h3>시그니처</h3></div></div><p class="product-description">비자대행 · 토모혼 · 부나켄 호핑 · 마사지 1시간</p><div class="product-point">✨ 알찬 프리미엄</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🐒</span><div><span class="product-code">AIP104</span><h3>신상 북부 코스</h3></div></div><p class="product-description">리쿠팡 · 리하가 섬 · 탕코코 국립공원</p><div class="product-point">✨ 북부 자연 탐험</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">👨‍👩‍👧‍👦</span><div><span class="product-code">AIP105</span><h3>우리끼리 단독행사</h3></div></div><p class="product-description">가족 · 소그룹 프라이빗 단독 행사</p><div class="product-point">✨ 우리 팀만 단독</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🏝️</span><div><span class="product-code">AIP106</span><h3>리하가 섬 특화</h3></div></div><p class="product-description">리하가 섬 + 토모혼 또는 부나켄 호핑</p><div class="product-point">✨ 리하가 중심 일정</div></article><article class="product-card"><div class="product-card-heading"><span class="product-emoji">🤿</span><div><span class="product-code">AIP108</span><h3>다이빙 6회 + 관광</h3></div></div><p class="product-description">다이빙 6회 · 시내관광 · 자격증 필수</p><div class="product-point">✨ 모일수록 할인 UP</div></article></div><div class="promotion-cta"><span>🌺 마나도 여행상품 전체 모아보기</span><a class="action-link" href="https://www.modetour.com/promotion/893" rel="noopener noreferrer" target="_blank">🎉 마나도 기획전 바로가기 <span aria-hidden="true">↗</span></a></div></div></section>
 <section id="faq"><div class="wrap"><div class="section-head"><div><div class="kicker">07 · FAQ</div><h2>마나도 자주 묻는 질문</h2><p class="lead">고객 상담에서 반복되는 질문과 답변을 한눈에 확인하세요.</p></div><span class="section-index">Q&amp;A TOP 5</span></div>
 <div class="faq"><details><summary>Q1. 수중 액티비티를 못 해도 즐길 거리가 많나요?</summary><p>네. 토모혼 고원 투어, 부킷도아·부킷카시, 탕코코 국립공원, 마나도 시내 관광 등 육상 코스도 풍부합니다.</p></details><details><summary>Q2. 이슬람 국가라 술이나 돼지고기 식사가 어렵나요?</summary><p>제공된 교육자료는 마나도의 기독교 문화와 지역 식문화 특징을 소개하고 있습니다. 실제 식당·상품별 식사 제공 여부는 현지에서 확인하는 것이 좋습니다.</p></details><details><summary>Q3. 입국 서류는 어떤 사이트에서 작성해야 하나요?</summary><p>All Indonesia 통합 사이트에서 입국 사전 등록 절차를 진행합니다. 등록 시점과 필요 서류는 출발 전에 인도네시아 공식 안내를 확인하세요.</p></details><details><summary>Q4. 발리 관광세와 같은 지방 관광세가 마나도에도 있나요?</summary><p>마나도 직항 입국 시 별도 지방 관광세가 없는 것으로 안내되어 있습니다. 지방세·입국 정책은 변경될 수 있으므로 최신 공식 안내를 확인해야 합니다.</p></details><details><summary>Q5. 한국에서 환전은 어떻게 준비하는 것이 좋나요?</summary><p>미화 100달러 신권을 준비해 현지 가이드 또는 환전소에서 루피아로 환전하는 방법을 권장합니다.</p></details></div>
 </div></section>
 </main>
-<footer><div class="wrap foot"><div><b>MODETOUR · MANADO</b><br/>마나도 여행 교육자료</div><div class="credits">마나도 여행 교육자료 · 지역 소개 / 관광지 / 호텔 / 일정 / 상품 안내<br/>사진 출처: <a href="https://jurnalaceh.pikiran-rakyat.com/nasional/pr-1796182266/mengintip-keindahan-taman-nasional-bunaken-destinasi-wisata-di-manado-yang-menjadi-situs-warisan-dunia" rel="noreferrer" target="_blank">Bunaken</a> · <a href="https://kilaskini.com/detail/553/sedang-berada-di-minahasa-rugi-kalau-tak-mampir-ke-pulau-lihaga-yang-menyimpan-keindahan-tersembunyi" rel="noreferrer" target="_blank">Lihaga</a> · <a href="https://www.hipwee.com/narasi/indahnya-danau-linow-tomohon-terkenal-sampai-mancanegara-berubah-3-warna/" rel="noreferrer" target="_blank">Lake Linow</a> · <a href="https://www.manado-holiday.com/tangkoko-national-park-nature-reserve/" rel="noreferrer" target="_blank">Tangkoko</a> · <a href="https://www.hanatour.com/promotion/plan/PM0068C14447" rel="noreferrer" target="_blank">Yesus Memberkati</a> · <a href="https://www.traveloka.com/id-id/hotel/indonesia/paradise-hotel-golf--resort-3000010015494" rel="noreferrer" target="_blank">Paradise Hotel Golf &amp; Resort</a> · <a href="https://www.marriott.com/ko/hotels/mdcfp-four-points-manado/photos/" rel="noreferrer" target="_blank">Four Points</a> · <a href="https://luleyhotels.com/" rel="noreferrer" target="_blank">Grand Luley</a> · <a href="https://www.bestwestern.com/" rel="noreferrer" target="_blank">Best Western</a> · <a href="https://www.swiss-belhotel.com/gallery/swiss-belhotel-maleosan-manado" rel="noreferrer" target="_blank">Swiss-Belhotel</a> · <a href="https://www.swiss-belhotel.com/gallery/the-sentra-manado" rel="noreferrer" target="_blank">The Sentra</a> · <a href="https://ndcmanado.com/" rel="noreferrer" target="_blank">NDC Resort</a> · <a href="https://www.luwansamanado.com/gallery/" rel="noreferrer" target="_blank">Luwansa</a> · <a href="https://www.openstreetmap.org/" rel="noreferrer" target="_blank">OpenStreetMap</a> 등.<br/>항공·입국·환율·호텔 운영 정보는 실제 판매 전 최신 정보로 재확인해야 합니다.</div></div></footer>
+<footer><div class="wrap foot"><div><b>MODETOUR · MANADO</b><br/>마나도 여행 교육자료</div><div class="credits">마나도 여행 교육자료 · 지역 소개 / 관광지 / 호텔 / 상품 안내<br/>사진 출처: <a href="https://jurnalaceh.pikiran-rakyat.com/nasional/pr-1796182266/mengintip-keindahan-taman-nasional-bunaken-destinasi-wisata-di-manado-yang-menjadi-situs-warisan-dunia" rel="noreferrer" target="_blank">Bunaken</a> · <a href="https://kilaskini.com/detail/553/sedang-berada-di-minahasa-rugi-kalau-tak-mampir-ke-pulau-lihaga-yang-menyimpan-keindahan-tersembunyi" rel="noreferrer" target="_blank">Lihaga</a> · <a href="https://www.hipwee.com/narasi/indahnya-danau-linow-tomohon-terkenal-sampai-mancanegara-berubah-3-warna/" rel="noreferrer" target="_blank">Lake Linow</a> · <a href="https://www.manado-holiday.com/tangkoko-national-park-nature-reserve/" rel="noreferrer" target="_blank">Tangkoko</a> · <a href="https://www.hanatour.com/promotion/plan/PM0068C14447" rel="noreferrer" target="_blank">Yesus Memberkati</a> · <a href="https://www.traveloka.com/id-id/hotel/indonesia/paradise-hotel-golf--resort-3000010015494" rel="noreferrer" target="_blank">Paradise Hotel Golf &amp; Resort</a> · <a href="https://www.marriott.com/ko/hotels/mdcfp-four-points-manado/photos/" rel="noreferrer" target="_blank">Four Points</a> · <a href="https://luleyhotels.com/" rel="noreferrer" target="_blank">Grand Luley</a> · <a href="https://www.bestwestern.com/" rel="noreferrer" target="_blank">Best Western</a> · <a href="https://www.swiss-belhotel.com/gallery/swiss-belhotel-maleosan-manado" rel="noreferrer" target="_blank">Swiss-Belhotel</a> · <a href="https://www.swiss-belhotel.com/gallery/the-sentra-manado" rel="noreferrer" target="_blank">The Sentra</a> · <a href="https://ndcmanado.com/" rel="noreferrer" target="_blank">NDC Resort</a> · <a href="https://www.luwansamanado.com/gallery/" rel="noreferrer" target="_blank">Luwansa</a> · <a href="https://www.openstreetmap.org/" rel="noreferrer" target="_blank">OpenStreetMap</a> 등.<br/>항공·입국·환율·호텔 운영 정보는 실제 판매 전 최신 정보로 재확인해야 합니다.</div></div></footer>
 <button aria-label="맨 위로" class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script>
-// If a hotel photo host blocks embedding, show a local image placeholder instead of a broken-image icon.
-document.querySelectorAll('.hotel-shot img').forEach((img) => {
-  img.addEventListener('error', function () {
-    const frame = this.closest('.hotel-shot');
-    if (!frame || frame.dataset.fallbackShown === '1') return;
-    frame.dataset.fallbackShown = '1';
-    frame.dataset.fallback = this.alt || '사진을 불러올 수 없습니다';
-    frame.classList.add('no-photo');
-    this.src = 'images/photo-fallback.svg';
-  }, { once: true });
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>// 이미지 불러오기 실패 시 순차 대체 이미지 사용 (모든 사진 공통)
+document.querySelectorAll('.photo img, .hotel-shot img').forEach((img) => {
+  let fallbackStage = 0;
+  const sources = [img.dataset.fallback, img.dataset.fallback2].filter(Boolean);
+  img.addEventListener('error', () => {
+    if (fallbackStage < sources.length) {
+      const next = sources[fallbackStage++];
+      if (next !== img.src) { img.src = next; return; }
+    }
+    const frame = img.closest('.photo, .hotel-shot');
+    if (frame) {
+      frame.classList.add('image-unavailable');
+      if (!frame.dataset.label) frame.dataset.label = img.alt || '사진 준비 중';
+    }
+    img.style.display = 'none';
+  });
 });
-
 // OpenStreetMap location overview.
+
 const mapEl = document.getElementById('manadoMap');
 if (mapEl && window.L) {
   const map = L.map(mapEl, { scrollWheelZoom: false }).setView([1.50, 124.96], 9);
@@ -229,4 +297,9 @@ if (mapEl && window.L) {
   mapEl.textContent = '지도를 불러올 수 없습니다. 오른쪽의 “지도 크게 보기”를 눌러 확인하세요.';
 }
 </script>
-</body></html>
+<script>document.querySelectorAll('.quicknav .menu-tile').forEach(link=>{
+  link.addEventListener('click',()=>{
+    document.querySelectorAll('.quicknav .menu-tile').forEach(x=>x.classList.remove('active'));
+    link.classList.add('active');
+  });
+});</script></body></html>
